@@ -14,6 +14,10 @@ while play == "yes":
             break 
         except: 
             print("That's not a number")
+            
+    import random 
+    GOOD_COMMENTS = ["Amazing!", "Lets go!", "Keep it up", "Nice work!"]
+    BAD_COMMENTS = ["Dont give up", "Keep trying", "You got next one!"]
     
     # Question 1
     question_attempts = tries
@@ -29,66 +33,100 @@ while play == "yes":
             if answer == c or answer == "c" or answer == "Rüppell'sVulture" or answer == "Ruppells Vulture".lower():
                 print("Correct!")
                 score +=5
+                print(random.choice (GOOD_COMMENTS))
                 break
             elif  answer == (""):
                 print("I see you didn't write anything")
+                print(random.choice (BAD_COMMENTS))
             else :
                 print("Incorrect")
+                print(random.choice (BAD_COMMENTS))
         
             question_attempts -= 1
     print("The answer is the Rüppell's Vulture")
 
 
     # Question 2
-    answer = input("What is the fastest water animal?").lower()
-    # Question 2 answer
-    if answer == "Sailfish".lower():
-        print("Correct!")
-        score +=5
-    elif  answer == (""):
-        print("I see you didn't write anything")
-    else : 
-        print("Incorrect")
+    question_attempts = tries
+    while question_attempts > 0:
+            answer = input("What is the fastest water animal?").lower()
+            # Question 2 answer
+            if answer == "Sailfish".lower():
+                print("Correct!")
+                score +=5
+                print(random.choice (GOOD_COMMENTS))
+                break
+            elif  answer == (""):
+                print("I see you didn't write anything")
+                print(random.choice (BAD_COMMENTS))
+            else : 
+                print("Incorrect")
+                print(random.choice (BAD_COMMENTS))
+                
+            question_attempts -= 1
     print("The fastest water animal is the sailfish.")
+
     # Question 3
-    answer = input("How many birds species are there in the world?")
-    # Question 3 answer
-    if answer == "11,000" or answer == "11000":
-        print("Correct!")  
-        score +=5
-    elif  answer == (""):
-        print("I see you didn't write anything")
-    else :
-        print("Incorrect")  
+    question_attempts = tries
+    while question_attempts > 0:
+            answer = input("How many birds species are there in the world?")
+            # Question 3 answer
+            if answer == "11,000" or answer == "11000":
+                print("Correct!")  
+                score +=5
+                print(random.choice (GOOD_COMMENTS))
+                break
+            elif  answer == (""):
+                print("I see you didn't write anything")
+                print(random.choice (BAD_COMMENTS))
+            else :
+                print("Incorrect")  
+                print(random.choice (BAD_COMMENTS))
+            question_attempts -= 1
     print("There are more than 11,000 unique bird species in the world.")
     # Question 4
-    answer = input("what mammal has no vocal cords?")
-    # Question 4 answer
-    if answer == "Sloth".lower() or answer == "The Sloth".lower():
-        print("Correct!")  
-        score +=5
-    elif  answer == (""):
-        print("I see you didn't write anything")
-    else :
-        print("Incorrect")  
+    question_attempts = tries
+    while question_attempts > 0:
+            answer = input("what mammal has no vocal cords?")
+            # Question 4 answer
+            if answer == "Sloth".lower() or answer == "The Sloth".lower():
+                print("Correct!")  
+                score +=5
+                print(random.choice (GOOD_COMMENTS))
+                break
+            elif  answer == (""):
+                print("I see you didn't write anything")
+                print(random.choice (BAD_COMMENTS))
+            else :
+                print("Incorrect")  
+            print(random.choice (BAD_COMMENTS))
+            question_attempts -= 1
     print("The Sloth dosen't have any vocal chords.")
 
     # Question 5
-    QUESTION_FORMAT = "{}\nA.{}B.{}C.{}D.{}"
-    question = "How many years can a snail sleep for?"
-    a= "1 year"
-    b= "100 years"
-    c= "4 years"
-    d= "3 years"
-    # Question 5 answer
-    answer = input (QUESTION_FORMAT.format(question, a, b, c, d)).lower()
-    if answer == d or answer == "d" or answer == "3" or answer == "3 Years".lower():
-        print("Correct!")
-        score +=5
-    elif  answer == (""):
-        print("I see you didn't write anything")
-    else :
-        print("Incorrect")
+    question_attempts = tries
+    while question_attempts > 0:
+            QUESTION_FORMAT = "{}\nA.{}B.{}C.{}D.{}E.{}"
+            question = "How many years can a snail sleep for?"
+            a= "1 year"
+            b= "100 years"
+            c= "4 years"
+            d= "3 years"
+            e= "0 years"
+            # Question 5 answer
+            answer = input (QUESTION_FORMAT.format(question, a, b, c, d)).lower()
+            if answer == d or answer == "d" or answer == "3" or answer == "3 Years".lower():
+                print("Correct!")
+                score +=5
+                print(random.choice (GOOD_COMMENTS))
+                break
+            elif  answer == (""):
+                print("I see you didn't write anything")
+                print(random.choice (BAD_COMMENTS))
+            else :
+                print("Incorrect")
+                print(random.choice (BAD_COMMENTS))
+                question_attempts -= 1
     print("Snails can actually sleep up to three years.")
 
 
