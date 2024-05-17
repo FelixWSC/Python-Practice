@@ -9,7 +9,7 @@ while play == "yes":
     
     while True:
         try:
-            tries = input("How many attempts do you want at each question? 1- 4")
+            tries = input("How many attempts do you want at each question? 1- 3")
             tries = int(tries)
             break 
         except: 
@@ -49,9 +49,15 @@ while play == "yes":
     # Question 2
     question_attempts = tries
     while question_attempts > 0:
-            answer = input("What is the fastest water animal?").lower()
+            QUESTION_FORMAT = "{}\nA.{}B.{}C.{}D.{}"
+            question = "What is the fastest water animal?"
+            a= "Sailfish"
+            b= "Shark"
+            c= "Marlin"
+            d= "Orca"
             # Question 2 answer
-            if answer == "Sailfish".lower():
+            answer = input (QUESTION_FORMAT.format(question, a, b, c, d)).lower()
+            if answer == a or answer == "a" or answer == "Sailfish".lower():
                 print("Correct!")
                 score +=5
                 print(random.choice (GOOD_COMMENTS))
@@ -59,20 +65,27 @@ while play == "yes":
             elif  answer == (""):
                 print("I see you didn't write anything")
                 print(random.choice (BAD_COMMENTS))
-            else : 
+            else :
                 print("Incorrect")
                 print(random.choice (BAD_COMMENTS))
-                
+        
             question_attempts -= 1
     print("The fastest water animal is the sailfish.")
 
     # Question 3
+    
     question_attempts = tries
     while question_attempts > 0:
-            answer = input("How many birds species are there in the world?")
-            # Question 3 answer
-            if answer == "11,000" or answer == "11000":
-                print("Correct!")  
+            QUESTION_FORMAT = "{}\nA.{}B.{}C.{}D.{}"
+            question = "How many birds species are there in the world?"
+            a= "2,000"
+            b= "11,000"
+            c= "100,000"
+            d= "23,000"
+            # Question 2 answer
+            answer = input (QUESTION_FORMAT.format(question, a, b, c, d)).lower()
+            if answer == b or answer == "b" or answer == "11,000" or answer == "11000":
+                print("Correct!")
                 score +=5
                 print(random.choice (GOOD_COMMENTS))
                 break
@@ -80,17 +93,25 @@ while play == "yes":
                 print("I see you didn't write anything")
                 print(random.choice (BAD_COMMENTS))
             else :
-                print("Incorrect")  
+                print("Incorrect")
                 print(random.choice (BAD_COMMENTS))
+        
             question_attempts -= 1
     print("There are more than 11,000 unique bird species in the world.")
+
     # Question 4
     question_attempts = tries
     while question_attempts > 0:
-            answer = input("what mammal has no vocal cords?")
-            # Question 4 answer
-            if answer == "Sloth".lower() or answer == "The Sloth".lower():
-                print("Correct!")  
+            QUESTION_FORMAT = "{}\nA.{}B.{}C.{}D.{}"
+            question = "what mammal has no vocal cords?"
+            a= "Sloth"
+            b= "Skunk"
+            c= "Giraffe "
+            d= "Cheetah"
+            # Question 2 answer
+            answer = input (QUESTION_FORMAT.format(question, a, b, c, d)).lower()
+            if answer == a or answer == "a" or answer == "Sloth".lower() or answer == "The Sloth".lower():
+                print("Correct!")
                 score +=5
                 print(random.choice (GOOD_COMMENTS))
                 break
@@ -98,8 +119,9 @@ while play == "yes":
                 print("I see you didn't write anything")
                 print(random.choice (BAD_COMMENTS))
             else :
-                print("Incorrect")  
-            print(random.choice (BAD_COMMENTS))
+                print("Incorrect")
+                print(random.choice (BAD_COMMENTS))
+        
             question_attempts -= 1
     print("The Sloth dosen't have any vocal chords.")
 
@@ -114,7 +136,7 @@ while play == "yes":
             d= "3 years"
             e= "0 years"
             # Question 5 answer
-            answer = input (QUESTION_FORMAT.format(question, a, b, c, d)).lower()
+            answer = input (QUESTION_FORMAT.format(question, a, b, c, d,e)).lower()
             if answer == d or answer == "d" or answer == "3" or answer == "3 Years".lower():
                 print("Correct!")
                 score +=5
