@@ -54,7 +54,7 @@ while play == "yes":
             else :
                 print("I see you didn't write anything")
                 question_attempts -= 1
-        print("The answer is: "+ str(OPTIONS[i][ANSWERS[i]]))
+        print("The answer was the "+ str(OPTIONS[i][ANSWERS[i]]))
 
 
 
@@ -62,3 +62,9 @@ while play == "yes":
     print("Thank you for trying my quiz {}, you got {} points!".format(name,score))
     play = input("Do you want to play again?")
 print("Thank you for playing my quiz!")
+
+#print("The answer is the Rüppell's Vulture")
+#print("The fastest water animal is the sailfish.")
+#print("There are more than 11,000 unique bird species in the world.")
+#print("The Sloth dosen't have any vocal chords.")
+#print("Snails can actually sleep up to three years.")
